@@ -57,8 +57,8 @@ const Hero = () => {
           
           <div className="relative">
             <img 
-              src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop" 
-              alt="Professional piano tuning service"
+              src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=600&h=400&fit=crop" 
+              alt="Person playing grand piano in concert hall"
               className="rounded-lg shadow-xl"
             />
           </div>
