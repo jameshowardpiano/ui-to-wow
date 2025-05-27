@@ -17,9 +17,12 @@ const Header = () => {
             <a href="#" className="text-gray-700 hover:text-orange-600">Contact</a>
           </nav>
 
-          <Button className="bg-orange-600 hover:bg-orange-700">
-            Get Started
-          </Button>
+          <div className="flex items-center space-x-4">
+            <a href="#" className="text-gray-700 hover:text-orange-600 font-medium">Login</a>
+            <Button className="bg-orange-600 hover:bg-orange-700">
+              Sign Up
+            </Button>
+          </div>
         </div>
       </div>
     </header>
