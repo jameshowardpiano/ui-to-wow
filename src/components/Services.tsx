@@ -3,14 +3,14 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const Services = () => {
   const services = [
-    { icon: "🎼", title: "Tuning", description: "Professional piano tuning" },
-    { icon: "🔧", title: "Repairs", description: "Expert piano repairs" },
-    { icon: "🎹", title: "Maintenance", description: "Regular maintenance" },
-    { icon: "🚚", title: "Moving", description: "Safe piano moving" },
-    { icon: "🎵", title: "Lessons", description: "Piano lessons" },
-    { icon: "✨", title: "Cleaning", description: "Deep cleaning service" },
-    { icon: "🎯", title: "Inspection", description: "Thorough inspection" },
-    { icon: "📋", title: "Assessment", description: "Value assessment" }
+    { icon: "🎹", title: "Piano Tuning", description: "Professional piano tuning services" },
+    { icon: "🎵", title: "String Replacement", description: "Expert string replacement" },
+    { icon: "🔧", title: "Repair & Service", description: "Comprehensive repair services" },
+    { icon: "🎼", title: "Piano Restoration", description: "Complete piano restoration" },
+    { icon: "✨", title: "Piano Cleaning", description: "Professional cleaning service" },
+    { icon: "🎯", title: "Piano Regulation", description: "Precise regulation service" },
+    { icon: "🗝️", title: "Key Replacement", description: "Key repair and replacement" },
+    { icon: "🎶", title: "Soundboard Repair", description: "Expert soundboard services" }
   ];
 
   return (
