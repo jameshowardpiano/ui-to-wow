@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const axios = require("axios");
 const cors = require("cors");
@@ -5,7 +6,7 @@ const cors = require("cors");
 const app = express();
 app.use(cors());
 
-const GOOGLE_API_KEY = "AIzaSyBOohfd99PLQcHmNAFWJJXX6OXZ7LY_bP8"; // Replace with your actual API key
+const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY;
 
 app.get("/api/search", async (req, res) => {
   const { query } = req.query;
