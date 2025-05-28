@@ -35,12 +35,8 @@ const Hero = ({ onSearchResults }: HeroProps) => {
     } finally {
       setLoading(false);
     }
-  const handleSearch = async () => {
-    await searchTechnicians(searchLocation);
-    if (onSearchResults) {
-      onSearchResults(technicians);
-    }
   };
+
 
   return (
     <section className="bg-gradient-to-r from-orange-50 to-orange-100 py-20 rounded-3xl max-w-7xl mx-auto mt-8 px-4 sm:px-6 lg:px-8">
@@ -65,18 +61,15 @@ const Hero = ({ onSearchResults }: HeroProps) => {
                 onChange={(e) => setSearchLocation(e.target.value)}
                 className="flex-1 h-12 text-base"
                 onKeyDown={e => { if (e.key === "Enter") handleSearch(); }}
-                onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
               />
               <Button 
                 size="lg" 
                 className="bg-orange-600 hover:bg-orange-700 h-12 px-6"
                 onClick={handleSearch}
                 disabled={loading}
-                disabled={isLoading}
               >
                 <Search className="w-4 h-4 mr-2" />
                 {loading ? "Searching..." : "Search"}
-                {isLoading ? 'Searching...' : 'Search'}
               </Button>
             </div>
 
