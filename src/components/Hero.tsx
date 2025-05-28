@@ -107,7 +107,7 @@ const Hero = ({ onSearchResults }: HeroProps) => {
           
           <div className="relative">
             <img 
-              src="/Group 47.png" 
+              src="/header-image.png" 
               alt="PianoCare Hero" 
               className="rounded-lg shadow-xl"
             />
