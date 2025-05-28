@@ -1,15 +1,22 @@
-
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
 import { useState } from "react";
+import { usePianoTechSearch } from "@/hooks/usePianoTechSearch";
 
-const Hero = () => {
+interface HeroProps {
+  onSearchResults?: (technicians: any[]) => void;
+}
+
+const Hero = ({ onSearchResults }: HeroProps) => {
   const [searchLocation, setSearchLocation] = useState("");
+  const { technicians, isLoading, searchTechnicians } = usePianoTechSearch();
 
-  const handleSearch = () => {
-    console.log("Searching for piano services in:", searchLocation);
-    // Add search logic here
+  const handleSearch = async () => {
+    await searchTechnicians(searchLocation);
+    if (onSearchResults) {
+      onSearchResults(technicians);
+    }
   };
 
   return (
@@ -34,14 +41,16 @@ const Hero = () => {
                 value={searchLocation}
                 onChange={(e) => setSearchLocation(e.target.value)}
                 className="flex-1 h-12 text-base"
+                onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
               />
               <Button 
                 size="lg" 
                 className="bg-orange-600 hover:bg-orange-700 h-12 px-6"
                 onClick={handleSearch}
+                disabled={isLoading}
               >
                 <Search className="w-4 h-4 mr-2" />
-                Search
+                {isLoading ? 'Searching...' : 'Search'}
               </Button>
             </div>
 

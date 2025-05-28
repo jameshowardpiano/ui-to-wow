@@ -1,4 +1,5 @@
 
+import { useState } from "react";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import PopularServices from "@/components/PopularServices";
@@ -10,12 +11,17 @@ import FAQ from "@/components/FAQ";
 import Newsletter from "@/components/Newsletter";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import SearchResults from "@/components/SearchResults";
+import { usePianoTechSearch } from "@/hooks/usePianoTechSearch";
 
 const Index = () => {
+  const { technicians, isLoading } = usePianoTechSearch();
+
   return (
     <div className="min-h-screen">
       <Header />
       <Hero />
+      <SearchResults technicians={technicians} isLoading={isLoading} />
       <Services />
       <PopularServices />
       <Experts />
