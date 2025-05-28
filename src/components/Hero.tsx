@@ -24,7 +24,7 @@ const Hero = ({ onSearchResults }: HeroProps) => {
     const query = `piano technician in ${searchLocation}`;
     try {
       const response = await axios.get(
-        "http://localhost:3001/api/search",
+        "http://localhost:3001/api/places",
         {
           params: { query },
         }
