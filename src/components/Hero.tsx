@@ -84,6 +84,11 @@ const Hero = ({ onSearchResults }: HeroProps) => {
                     <li key={place.place_id} className="p-4 bg-white rounded shadow flex flex-col">
                       <span className="font-medium text-gray-900">{place.name}</span>
                       <span className="text-gray-700 text-sm">{place.formatted_address}</span>
+                      {place.formatted_phone_number && (
+                        <span className="text-gray-600 text-sm mt-1">
+                          Phone: {place.formatted_phone_number}
+                        </span>
+                      )}
                       {place.rating && (
                         <span className="text-yellow-600 text-xs mt-1">
                           Rating: {place.rating} ⭐
