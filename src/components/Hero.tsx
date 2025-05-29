@@ -24,7 +24,7 @@ const Hero = ({ onSearchResults }: HeroProps) => {
     const query = `piano technician in ${searchLocation}`;
     try {
       const response = await axios.get(
-        "https://ui-to-wow.onrender.com/api/places",
+        "https://ui-to-wow.onrender.com/api/search",
         {
           params: { query },
         }
