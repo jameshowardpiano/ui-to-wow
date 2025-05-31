@@ -11,7 +11,10 @@ const Header = () => {
           {/* Logo and Brand */}
           <div className="flex items-center">
             <img src="/logo.png" alt="PianoCare Logo" className="h-8 w-auto mr-3" />
-            <span className="text-2xl font-bold text-orange-700 tracking-tight">PianoCare</span>
+            <span className="text-2xl tracking-tight">
+              <span className="font-bold text-black">Piano</span>
+              <span className="font-normal text-black">Care</span>
+            </span>
           </div>
           {/* Hamburger for mobile */}
           <button
@@ -33,7 +36,10 @@ const Header = () => {
           <div className="hidden md:flex items-center space-x-4">
             <a href="#" className="text-gray-700 hover:text-orange-700 font-medium">Sign up</a>
             <a href="#" className="text-gray-700 hover:text-orange-700 font-medium">Login</a>
-            <Button className="bg-orange-700 hover:bg-orange-800 text-white font-semibold px-4 py-2 rounded-md">
+            <Button
+              className="bg-[#B88746] hover:bg-[#a0763d] text-white font-semibold px-4 py-2"
+              style={{ borderRadius: "40px" }}
+            >
               Become a Technician
             </Button>
           </div>
@@ -49,7 +55,10 @@ const Header = () => {
             <div className="flex flex-col gap-2 mt-2">
               <a href="#" className="text-gray-700 hover:text-orange-700 font-medium">Sign up</a>
               <a href="#" className="text-gray-700 hover:text-orange-700 font-medium">Login</a>
-              <Button className="bg-orange-700 hover:bg-orange-800 text-white font-semibold w-full rounded-md">
+              <Button
+                className="bg-[#B88746] hover:bg-[#a0763d] text-white font-semibold w-full"
+                style={{ borderRadius: "40px" }}
+              >
                 Become a Technician
               </Button>
             </div>

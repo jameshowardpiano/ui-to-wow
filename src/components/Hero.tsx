@@ -39,7 +39,7 @@ const Hero = ({ onSearchResults }: HeroProps) => {
 
 
   return (
-    <section className="bg-gradient-to-r from-orange-50 to-orange-100 py-20 rounded-3xl max-w-7xl mx-auto mt-8 px-4 sm:px-6 lg:px-8">
+    <section className="py-20 rounded-3xl max-w-7xl mx-auto mt-8 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: "#E6DDD1" }}>
       <div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
@@ -64,7 +64,7 @@ const Hero = ({ onSearchResults }: HeroProps) => {
               />
               <Button 
                 size="lg" 
-                className="bg-orange-600 hover:bg-orange-700 h-12 px-6"
+                className="bg-[#B88746] hover:bg-[#a0763d] h-12 px-6"
                 onClick={handleSearch}
                 disabled={loading}
               >
@@ -99,15 +99,6 @@ const Hero = ({ onSearchResults }: HeroProps) => {
                 </ul>
               </div>
             )}
-
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-orange-600 hover:bg-orange-700">
-                Get Started
-              </Button>
-              <Button size="lg" variant="outline">
-                Learn More
-              </Button>
-            </div>
           </div>
           
           <div className="relative">
